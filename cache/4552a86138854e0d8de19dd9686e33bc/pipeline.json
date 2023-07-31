@@ -1,0 +1,32 @@
+{
+    "playground_path": "./pipeline_playground",
+    "steps": [
+        {
+            "class_name": "DataExtraction",
+            "retry": {
+                "attempts": 3,
+                "backoff": 1
+            }
+        },
+        {
+            "class_name": "DataTransformation",
+            "retry": {
+                "attempts": 3,
+                "backoff": 1
+            }
+        },
+        {
+            "class_name": "xxx",
+            "retry": {
+                "attempts": 3,
+                "backoff": 1
+            }
+        }
+    ],
+    "initialize_step": "DataExtraction",
+    "notifications": {
+        "email_on_failure": true,
+        "email_on_start": true,
+        "email_on_success": true
+    }
+}
